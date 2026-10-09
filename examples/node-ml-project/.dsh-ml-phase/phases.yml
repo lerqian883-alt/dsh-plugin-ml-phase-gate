@@ -1,0 +1,15 @@
+version: 1
+supersedes: []
+phases:
+  - id: M0
+    name: 问题定义与验收指标
+    exit:
+      checks: ["010"]
+      artifacts: []
+    commonPitfalls: ["先写模型后写指标", "验收指标不可机器检查"]
+  - id: M1
+    name: 数据接入与来源记录
+    exit:
+      checks: ["011"]
+      artifacts: []
+    commonPitfalls: ["数据来源和许可没有台账", "原始数据被复制回项目"]

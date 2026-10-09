@@ -1,0 +1,18 @@
+# ============================================================================
+# dsh-plugin-ml-phase-gate - DSH bundle patch
+# ============================================================================
+# This file is the plugin's mount declaration. DSH composes it into the web
+# profile when the package is installed as a bundle layer.
+#
+# Local development install:
+#   dsh plugin --profile web add link:<absolute plugin path>
+#
+# The host half defaults to auto activation: ML projects show the phase UI,
+# while projects without a phase snapshot stay quiet.
+# ============================================================================
+
+- insert:
+    - id: ml-phase-gate
+      name: dsh-plugin-ml-phase-gate
+      config:
+        activationMode: auto

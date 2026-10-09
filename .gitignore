@@ -1,0 +1,8 @@
+node_modules/
+coverage/
+.tmp/
+*.log
+.DS_Store
+Thumbs.db
+*.tgz
+*.sha256

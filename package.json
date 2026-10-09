@@ -1,0 +1,86 @@
+{
+  "name": "dsh-plugin-ml-phase-gate",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "DSH ML phase gate plugin with configurable activation, evidence gates, and portable project bootstrap.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./contracts": {
+      "types": "./lib/types/contracts.d.ts",
+      "default": "./lib/contracts.js"
+    },
+    "./client": {
+      "types": "./lib/client.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "examples",
+    "cordis.patch.yml",
+    "phases.default.yml",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "docs/ARCHITECTURE.md",
+    "docs/CONTRACTS.md",
+    "docs/IMPLEMENTATION-LOGIC.md",
+    "docs/P8-IMPLEMENTATION-LOGIC.md",
+    "docs/P8-ACCEPTANCE.md",
+    "docs/P8-ADVERSARIAL-REVIEW.md",
+    "docs/P9-IMPLEMENTATION-LOGIC.md"
+  ],
+  "scripts": {
+    "test:p0": "node --test --test-isolation=none test/p0-contracts.test.mjs",
+    "test:p1": "node --test --test-isolation=none test/p1-skeleton.test.mjs",
+    "test:p2": "node --test --test-isolation=none test/p2-yaml.test.mjs test/p2-phases.test.mjs test/p2-project-root.test.mjs test/p2-state.test.mjs",
+    "test:p3": "node --test --test-isolation=none test/p3-evidence.test.mjs",
+    "test:p4": "node --test --test-isolation=none test/p4-tools.test.mjs",
+    "test:p5": "node --test --test-isolation=none test/p5-projection.test.mjs",
+    "test:p6": "node --test --test-isolation=none test/p6-client.test.mjs",
+    "test:p7": "node --test --test-isolation=none test/p7-audit.test.mjs test/p7-realtime.test.mjs",
+    "test": "node --test --test-isolation=none test/p0-contracts.test.mjs test/p1-skeleton.test.mjs test/p2-yaml.test.mjs test/p2-phases.test.mjs test/p2-project-root.test.mjs test/p2-state.test.mjs test/p3-evidence.test.mjs test/p4-tools.test.mjs test/p5-projection.test.mjs test/p6-client.test.mjs test/p7-audit.test.mjs test/p7-realtime.test.mjs test/p9-portability.test.mjs",
+    "bootstrap": "node scripts/bootstrap-project.mjs",
+    "pack:check": "node scripts/check-package.mjs",
+    "smoke": "node scripts/smoke-install.mjs && node scripts/smoke-package.mjs",
+    "release:pack": "node scripts/pack-release.mjs",
+    "test:p9": "node --test --test-isolation=none test/p9-portability.test.mjs",
+    "smoke:package": "node scripts/smoke-package.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-primitives",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "ml",
+    "mlops",
+    "phase-gate"
+  ]
+}

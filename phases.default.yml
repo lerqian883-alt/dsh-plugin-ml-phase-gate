@@ -1,0 +1,61 @@
+# Default ML phase definitions for dsh-plugin-ml-phase-gate.
+# A project may override phase ids in <project>/.dsh-ml-phase/phases.yml.
+# Empty checks are intentional: the default flow is structural only, and a
+# project must bind real work/checks/*.ps1 evidence before a stage can advance.
+version: 1
+supersedes: []
+phases:
+  - id: M0
+    name: 问题定义与验收指标
+    exit:
+      checks: []
+      artifacts: []
+    commonPitfalls: ["先写模型后写指标", "验收指标不可机器检查"]
+  - id: M1
+    name: 数据接入与来源记录
+    exit:
+      checks: []
+      artifacts: []
+    commonPitfalls: ["数据来源和许可没有台账", "原始数据被复制回项目"]
+  - id: M2
+    name: 数据验证与切分
+    exit:
+      checks: []
+      artifacts: []
+    commonPitfalls: ["训练集和验证集泄漏", "切分不可复现"]
+  - id: M3
+    name: 参照与基线
+    exit:
+      checks: []
+      artifacts: []
+    commonPitfalls: ["没有参照就调模型", "基线不可复现"]
+  - id: M4
+    name: 训练与模型选择
+    exit:
+      checks: []
+      artifacts: []
+    commonPitfalls: ["用测试集选模型", "只记录最好一次结果"]
+  - id: M5
+    name: 评估与误差分析
+    exit:
+      checks: []
+      artifacts: []
+    commonPitfalls: ["只看单一指标", "不分析失败样本"]
+  - id: M6
+    name: 稳健性与污染检查
+    exit:
+      checks: []
+      artifacts: []
+    commonPitfalls: ["忽略分布偏移", "忽略消融与稳健性"]
+  - id: M7
+    name: 可复现打包
+    exit:
+      checks: []
+      artifacts: []
+    commonPitfalls: ["缺少环境快照", "缺少运行入口"]
+  - id: M8
+    name: 交付与签收
+    exit:
+      checks: []
+      artifacts: []
+    commonPitfalls: ["没有交付清单", "没有已知边界说明"]
