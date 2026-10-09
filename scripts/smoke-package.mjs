@@ -16,7 +16,7 @@ function npm(args, cwd) {
   const result = npmCli
     ? spawnSync(process.execPath, [npmCli, ...args], { cwd, encoding: 'utf8' })
     : process.platform === 'win32'
-      ? spawnSync(process.env.ComSpec ?? 'cmd.exe', ['/d', '/s', '/c', `npm ${args.join(' ')}`], { cwd, encoding: 'utf8' })
+      ? spawnSync(process.env.ComSpec ?? 'cmd.exe', ['/d', '/s', '/c', `npm ${args.map((arg) => `"${String(arg).replaceAll('"', '""')}"`).join(' ')}`], { cwd, encoding: 'utf8' })
       : spawnSync('npm', args, { cwd, encoding: 'utf8' });
   if (result.status !== 0) throw new Error(result.error?.message || result.stderr || result.stdout || 'npm command failed');
   return result;
