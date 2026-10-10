@@ -159,7 +159,7 @@ phases:
       checks: ["010"]
       artifacts: []
 `, 'utf8');
-    await writeFile(join(root, 'work', 'verify.cmd'), '@echo off\nif "%2"=="010-" (echo pass & exit /b 0)\nexit /b 9\n', 'utf8');
+    await writeFile(join(root, 'work', 'verify.mjs'), `const index = process.argv.indexOf('-Only');\nif (process.argv[index + 1] === '010-') { console.log('pass'); process.exit(0); }\nprocess.exit(9);\n`, 'utf8');
     await writeStateAtomic(root, createInitialState('M0'), { projectStateFile: '.dsh-ml-phase/state.json' });
 
     const status = createTools(config).find((tool) => tool.name === 'ml_phase_status');

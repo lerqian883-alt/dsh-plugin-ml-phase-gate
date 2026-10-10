@@ -40,11 +40,12 @@ phases:
       checks: ["012"]
       artifacts: []
 `, 'utf8');
-  await writeFile(join(root, 'work', 'verify.cmd'), `@echo off
-if "%2"=="010-" (echo pass-010 & exit /b 0)
-if "%2"=="011-" (echo ${m1Pass ? 'pass-011' : 'fail-011'} & exit /b ${m1Pass ? 0 : 1})
-if "%2"=="012-" (echo fail-012 & exit /b 1)
-exit /b 9
+  await writeFile(join(root, 'work', 'verify.mjs'), `const index = process.argv.indexOf('-Only');
+const prefix = process.argv[index + 1];
+if (prefix === '010-') { console.log('pass-010'); process.exit(0); }
+if (prefix === '011-') { console.log('${m1Pass ? 'pass-011' : 'fail-011'}'); process.exit(${m1Pass ? 0 : 1}); }
+if (prefix === '012-') { console.log('fail-012'); process.exit(1); }
+process.exit(9);
 `, 'utf8');
   if (m1Artifact) await writeFile(join(root, 'outputs', 'm1.json'), '{"ok":true}', 'utf8');
   if (state !== null) await writeStateAtomic(root, createInitialState(state), { projectStateFile: '.dsh-ml-phase/state.json' });
