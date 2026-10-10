@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-ml-phase-gate",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "type": "module",
   "description": "DSH ML phase gate plugin with configurable activation, evidence gates, and portable project bootstrap.",

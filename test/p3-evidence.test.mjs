@@ -292,7 +292,7 @@ exit 1
 `, 'utf8');
     const result = await runVerifyCheck(root, 'M0', '010', {
       verifyCommand: 'work/verify.ps1',
-      timeoutMs: 5000,
+      timeoutMs: 15000,
     });
     assert.equal(result.status, 'pass');
     assert.match(result.stdout, /pass-ps1/);

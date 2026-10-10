@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- Increase the Windows PowerShell gate test timeout for GitHub-hosted runners.
+- Publish the cross-platform CI fix under a new immutable patch version.
+
 ## 0.1.1
 
 - Remove the Node 24-only `--test-isolation=none` test flag so GitHub Actions can run on Node 22.
