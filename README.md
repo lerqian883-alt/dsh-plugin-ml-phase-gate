@@ -51,7 +51,7 @@ dsh plugin --profile web add <path-or-install-spec-to-tarball>
 ### GitHub 源码开发安装
 
 ```powershell
-git clone https://github.com/<owner>/dsh-plugin-ml-phase-gate.git
+git clone https://github.com/lerqian883-alt/dsh-plugin-ml-phase-gate.git
 cd dsh-plugin-ml-phase-gate
 dsh plugin --profile web add link:"$PWD"
 ```

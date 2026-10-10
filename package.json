@@ -82,5 +82,13 @@
     "ml",
     "mlops",
     "phase-gate"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lerqian883-alt/dsh-plugin-ml-phase-gate.git"
+  },
+  "homepage": "https://github.com/lerqian883-alt/dsh-plugin-ml-phase-gate",
+  "bugs": {
+    "url": "https://github.com/lerqian883-alt/dsh-plugin-ml-phase-gate/issues"
+  }
 }
