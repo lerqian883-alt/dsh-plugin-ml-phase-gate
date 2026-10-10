@@ -298,14 +298,15 @@ test('advance detects declared change while waiting for the project lock', async
   try {
     const advance = await tool('ml_phase_advance');
     const pending = advance.execute({ to: 'M1' }, execFor(root));
-    await new Promise((resolve) => setTimeout(resolve, 50));
-    releaseChange();
-    await changer;
-    await assert.rejects(pending, (error) => {
+    const rejected = assert.rejects(pending, (error) => {
       assert.ok(error instanceof PhaseGateError);
       assert.equal(error.code, 'E_WRITE_CONFLICT');
       return true;
     });
+    await new Promise((resolve) => setTimeout(resolve, 50));
+    releaseChange();
+    await changer;
+    await rejected;
     assert.equal((await readState(root)).declared, 'M1');
   } finally {
     await rm(root, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
