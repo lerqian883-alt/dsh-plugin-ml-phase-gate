@@ -19,7 +19,7 @@
 P3 需要真实派生 `verify.cmd`、`cmd.exe`、`taskkill` 和 node 子进程，因此测试必须在允许进程派生的受控环境中运行：
 
 ```powershell
-node --test --test-isolation=none test/p0-contracts.test.mjs test/p1-skeleton.test.mjs test/p2-yaml.test.mjs test/p2-phases.test.mjs test/p2-project-root.test.mjs test/p2-state.test.mjs test/p3-evidence.test.mjs
+node --test test/p0-contracts.test.mjs test/p1-skeleton.test.mjs test/p2-yaml.test.mjs test/p2-phases.test.mjs test/p2-project-root.test.mjs test/p2-state.test.mjs test/p3-evidence.test.mjs
 ```
 
 结果：

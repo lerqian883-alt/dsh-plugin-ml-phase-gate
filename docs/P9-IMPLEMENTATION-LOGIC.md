@@ -125,7 +125,7 @@ Node 示例作为跨平台实际验证路径。
 
 `package.json`：
 
-- `version` 提升到 `0.1.0`。
+- `version` 提升到 `0.1.1`。
 - `private` 改为 `false`。
 - 增加 `license`、`engines`、`scripts`、`files`。
 - 不写伪造 GitHub owner；repository 可由发布者在创建仓库后填写。

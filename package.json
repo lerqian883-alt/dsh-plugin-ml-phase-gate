@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-ml-phase-gate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "type": "module",
   "description": "DSH ML phase gate plugin with configurable activation, evidence gates, and portable project bootstrap.",
@@ -39,20 +39,20 @@
     "docs/P9-IMPLEMENTATION-LOGIC.md"
   ],
   "scripts": {
-    "test:p0": "node --test --test-isolation=none test/p0-contracts.test.mjs",
-    "test:p1": "node --test --test-isolation=none test/p1-skeleton.test.mjs",
-    "test:p2": "node --test --test-isolation=none test/p2-yaml.test.mjs test/p2-phases.test.mjs test/p2-project-root.test.mjs test/p2-state.test.mjs",
-    "test:p3": "node --test --test-isolation=none test/p3-evidence.test.mjs",
-    "test:p4": "node --test --test-isolation=none test/p4-tools.test.mjs",
-    "test:p5": "node --test --test-isolation=none test/p5-projection.test.mjs",
-    "test:p6": "node --test --test-isolation=none test/p6-client.test.mjs",
-    "test:p7": "node --test --test-isolation=none test/p7-audit.test.mjs test/p7-realtime.test.mjs",
-    "test": "node --test --test-isolation=none test/p0-contracts.test.mjs test/p1-skeleton.test.mjs test/p2-yaml.test.mjs test/p2-phases.test.mjs test/p2-project-root.test.mjs test/p2-state.test.mjs test/p3-evidence.test.mjs test/p4-tools.test.mjs test/p5-projection.test.mjs test/p6-client.test.mjs test/p7-audit.test.mjs test/p7-realtime.test.mjs test/p9-portability.test.mjs",
+    "test:p0": "node --test test/p0-contracts.test.mjs",
+    "test:p1": "node --test test/p1-skeleton.test.mjs",
+    "test:p2": "node --test test/p2-yaml.test.mjs test/p2-phases.test.mjs test/p2-project-root.test.mjs test/p2-state.test.mjs",
+    "test:p3": "node --test test/p3-evidence.test.mjs",
+    "test:p4": "node --test test/p4-tools.test.mjs",
+    "test:p5": "node --test test/p5-projection.test.mjs",
+    "test:p6": "node --test test/p6-client.test.mjs",
+    "test:p7": "node --test test/p7-audit.test.mjs test/p7-realtime.test.mjs",
+    "test": "node --test test/p0-contracts.test.mjs test/p1-skeleton.test.mjs test/p2-yaml.test.mjs test/p2-phases.test.mjs test/p2-project-root.test.mjs test/p2-state.test.mjs test/p3-evidence.test.mjs test/p4-tools.test.mjs test/p5-projection.test.mjs test/p6-client.test.mjs test/p7-audit.test.mjs test/p7-realtime.test.mjs test/p9-portability.test.mjs",
     "bootstrap": "node scripts/bootstrap-project.mjs",
     "pack:check": "node scripts/check-package.mjs",
     "smoke": "node scripts/smoke-install.mjs && node scripts/smoke-package.mjs",
     "release:pack": "node scripts/pack-release.mjs",
-    "test:p9": "node --test --test-isolation=none test/p9-portability.test.mjs",
+    "test:p9": "node --test test/p9-portability.test.mjs",
     "smoke:package": "node scripts/smoke-package.mjs"
   },
   "dsh": {

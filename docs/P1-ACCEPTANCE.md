@@ -22,7 +22,7 @@
 命令：
 
 ```powershell
-node --test --test-isolation=none test/p0-contracts.test.mjs test/p1-skeleton.test.mjs
+node --test test/p0-contracts.test.mjs test/p1-skeleton.test.mjs
 ```
 
 实际结果：

@@ -44,9 +44,9 @@ unknown prefix -> fail
 ## 3. 打包结果
 
 ```text
-filename: dsh-plugin-ml-phase-gate-0.1.0.tgz
+filename: dsh-plugin-ml-phase-gate-0.1.1.tgz
 files: 69
-sha256: 57BBE40A7D658D4232F03C0DF18882F3B34CB178E3D35676CD7DEEF8A4AD2272
+sha256: B8FDEBE72DE5DB74F9702D9CA93D30A67E4328B49F0DC8DDA3BC9EFE6289D1F7
 ```
 
 验证：

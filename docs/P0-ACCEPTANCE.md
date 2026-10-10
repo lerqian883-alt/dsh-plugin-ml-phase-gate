@@ -35,13 +35,13 @@
 命令：
 
 ```powershell
-node --test --test-isolation=none test/p0-contracts.test.mjs
+node --test test/p0-contracts.test.mjs
 ```
 
 说明：
 
 - 常规 `node --test` 在当前沙箱中会因隔离子进程触发 `spawn EPERM`。
-- `--test-isolation=none` 运行同一批断言并提供有效结果。
+- `` 运行同一批断言并提供有效结果。
 - 测试不依赖 DSH 运行时。
 
 实际结果：

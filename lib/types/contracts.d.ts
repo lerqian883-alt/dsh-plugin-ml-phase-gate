@@ -14,7 +14,7 @@ export const SNAPSHOT_VERSION: 4;
 export const PROJECTION_VERSION: 4;
 export const PACKAGE_NAME: 'dsh-plugin-ml-phase-gate';
 export const PLUGIN_NAME: 'ml-phase-gate';
-export const PLUGIN_VERSION: '0.1.0';
+export const PLUGIN_VERSION: '0.1.1';
 export const ACTIVATION_MODES: { readonly AUTO: 'auto'; readonly ALWAYS: 'always'; readonly OFF: 'off' };
 export const VERIFY_CANDIDATES: readonly ['work/verify.cmd', 'work/verify.ps1', 'work/verify.mjs', 'work/verify.sh'];
 export const PROJECT_STATE_DIR: '.dsh-ml-phase';

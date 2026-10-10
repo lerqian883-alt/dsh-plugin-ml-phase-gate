@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Remove the Node 24-only `--test-isolation=none` test flag so GitHub Actions can run on Node 22.
+- Keep `v0.1.0` immutable and publish the CI fix as a new patch release.
+
 ## 0.1.0
 
 - Add configurable `activationMode` with auto, always, and off behavior.

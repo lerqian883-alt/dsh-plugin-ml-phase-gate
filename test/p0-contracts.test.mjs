@@ -16,7 +16,7 @@ test('P0 contract identity and versions are frozen', () => {
   assert.equal(contracts.PROJECTION_VERSION, 4);
   assert.equal(contracts.PACKAGE_NAME, 'dsh-plugin-ml-phase-gate');
   assert.equal(contracts.PLUGIN_NAME, 'ml-phase-gate');
-  assert.equal(contracts.PLUGIN_VERSION, '0.1.0');
+  assert.equal(contracts.PLUGIN_VERSION, '0.1.1');
   assert.deepEqual(contracts.ACTIVATION_MODES, { AUTO: 'auto', ALWAYS: 'always', OFF: 'off' });
   assert.deepEqual(contracts.VERIFY_CANDIDATES, ['work/verify.cmd', 'work/verify.ps1', 'work/verify.mjs', 'work/verify.sh']);
 });
